@@ -1,5 +1,4 @@
-                                                                                                Project 2    
-
+-- Querying york-river bookseller's database project
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Query 1 : List customers by name along with category and language such that the customer has bought all the books offerred in that category / language group and there is more than one book in that category / language group. Do not
@@ -172,3 +171,4 @@ FROM (SELECT c.name as name ,p.cid as cid ,p.title as title, p.year as year
       WHERE p.cid=c.cid and p.qnty >=1
       ORDER by c.cid desc) as pc2
 WHERE pc1.year=pc2.year and pc1.title = pc2.title and pc1.cid > pc2.cid;
+
